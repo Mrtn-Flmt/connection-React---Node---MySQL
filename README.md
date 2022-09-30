@@ -1,4 +1,9 @@
 
+## 🚀 About Us
+We are IT students at Epitech Lille, and full stack developers...
+
+
+
 # JobBoard
 
 Development of a full-stack web leaderboard including:
@@ -9,6 +14,13 @@ Development of a full-stack web leaderboard including:
     - The usage of a dependencies manager
 
 
+## Tech Stack
+
+**Client:** React, Bootstrap
+
+**Server:** Node, Express
+
+**DATABASE:** MySQL 
 ## How launch
 Make you sur the port :1999 & :3000 is eneable.
 
