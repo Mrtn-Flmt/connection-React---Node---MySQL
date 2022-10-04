@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Axios from 'axios';
+import {useNavigate} from 'react-router-dom';
 
 function LoginSystem() {
     const [nameReg, setNameReg] = useState("")
@@ -12,10 +13,15 @@ function LoginSystem() {
 
     const [loginStatus, setLoginStatus] = useState("")
 
+    const navigate = useNavigate();
+    const navigateHome = () => {
+        navigate('/');
+    };
+
     function register() {
         Axios.post('http://localhost:1999/register', {
             name: nameReg,
-            username: usernameReg, 
+            username: usernameReg,
             email: emailReg,
             password: passwordReg
         }).then((response)  => {
@@ -30,9 +36,12 @@ function LoginSystem() {
             password: password
         }).then((response)  => {
             if (response.data.message) {
-                setLoginStatus(response.data.message)
+                setLoginStatus(response.data.message);
+                localStorage.setItem('isConnected', "false");
             } else {
-                setLoginStatus(response.data[0].email)
+                setLoginStatus(response.data[0].email);
+                navigateHome();
+                localStorage.setItem('isConnected', "true");
             }
             console.log(response);
         })
@@ -58,7 +67,6 @@ function LoginSystem() {
                     </form>
                 </div>
             </div>
-
             <div className="col-xs-6 col-sm-6 col-md-6">
                 <div className="card">
                     <h1 className="text-center p-3">Register</h1>
