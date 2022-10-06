@@ -73,7 +73,7 @@ export default function RegisterSystem() {
                             <input type="password" id="registerRepeatPassword" className="form-control" onChange={(e) => {checkPassword(e.target.value)}} onChange={(e)  => {setPasswordReg(e.target.value)}} required/>
                         </div>
                         <p className="incorectPassword text-center text-danger d-none">password must be the same</p>
-                        {passwordReg === passwordConfirmReg ? '' : <div className="text-danger m-3 ">password is not same</div>}
+                        {passwordReg === passwordConfirmReg || passwordReg.length == 0 ? '' : <div className="text-danger m-3 ">password is not same</div>}
                         <button type="submit" className=" m-3 btn btn-primary btn-block mb-3" onClick={register}>Sign up</button>
                     </form>
                 </div>
