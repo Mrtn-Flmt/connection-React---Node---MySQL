@@ -27,7 +27,7 @@ app.post('/register', (req, res) => {
             if (err)
                 console.log(err);
             else
-                console.log("Insert into users: " + name + username + email + password);
+                console.log("Insert into users: " + name + " " + username + " " + email + " " + password);
         }
     )
 })

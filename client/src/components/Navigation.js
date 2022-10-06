@@ -6,9 +6,6 @@ export default Navigation = () => {
     const auth = localStorage.getItem('isConnected');
 
     const navigate = useNavigate();
-    const navigateHome = () => {
-        navigate('/');
-    };
 
     function setDisconnected() {
         localStorage.removeItem('isConnected');
@@ -19,7 +16,7 @@ export default Navigation = () => {
         return (
             <nav className="navbar navbar-expand-lg bg-light">
                 <div className="container d-flex">
-                    <a className="navbar-brand">GG 😎</a>
+                    <a className="navbar-brand">Employ me 😎</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -40,7 +37,7 @@ export default Navigation = () => {
         return (
             <nav className="navbar navbar-expand-lg bg-light">
                 <div className="container d-flex">
-                    <a className="navbar-brand">Employ me😎</a>
+                    <a className="navbar-brand">Employ me 😎</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -51,6 +48,9 @@ export default Navigation = () => {
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link"><NavLink to="/Login">Login</NavLink></a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link"><NavLink to="/Register">Register</NavLink></a>
                             </li>
                         </ul>
                     </div>
