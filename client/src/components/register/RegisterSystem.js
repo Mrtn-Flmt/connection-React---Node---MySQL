@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react'
 import Axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 
@@ -37,18 +37,10 @@ export default function RegisterSystem() {
     }
 
     function checkPassword() {
-        var x = document.getElementsByClassName('incorectPassword');
-
         if ( passwordReg.length > 0 && passwordConfirmReg === passwordReg) {
-            console.log("is not same");
-            x[0].style.display = "none";
-            if (x[0].style.display === 'none')
-                x.style.display = 'block';
-            else
-                x.style.display = 'none';
+            console.log("is same");
         } else {
             console.log("is not same");
-            x[0].style.display = "block";
         }
     }
 
@@ -79,9 +71,9 @@ export default function RegisterSystem() {
                         <div className="form-outline mb p-3">
                             <label className="form-label" for="registerRepeatPassword">Repeat password</label>
                             <input type="password" id="registerRepeatPassword" className="form-control" onChange={(e) => {checkPassword(e.target.value)}} onChange={(e)  => {setPasswordReg(e.target.value)}} required/>
-                            
                         </div>
                         <p className="incorectPassword text-center text-danger d-none">password must be the same</p>
+                        {passwordReg === passwordConfirmReg ? '' : <div className="text-danger m-3 ">password is not same</div>}
                         <button type="submit" className=" m-3 btn btn-primary btn-block mb-3" onClick={register}>Sign up</button>
                     </form>
                 </div>
