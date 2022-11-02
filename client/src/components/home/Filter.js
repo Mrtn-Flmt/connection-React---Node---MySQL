@@ -2,7 +2,7 @@ import React from 'react';
 
 const Filter = () => {
     return (
-        <div className="card col-xs-12 col-sm-12 col-md-2">
+        <div className="card col-xs-12 col-sm-12 col-md-2 h-25">
             <form class="form-horizontal">
                 <div className="form-group">
                     <strong>Contrats</strong>

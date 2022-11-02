@@ -1,8 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import LoginSystem from '../components/login/LoginSystem';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
+import Footer from '../components/Footer';
 
 const Login = () => {
     return (
@@ -14,6 +13,8 @@ const Login = () => {
                     <LoginSystem />
                 </div>
             </div>
+            <br/><br/><br/><br/><br/><br/><br/>
+            <Footer />
         </div>
     );
 };

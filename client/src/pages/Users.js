@@ -1,16 +1,16 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import RegisterSystem from '../components/register/RegisterSystem';
 import Footer from '../components/Footer';
+import AllUsers from '../components/admin/AllUsers';
 
-const Register = () => {
+const Users = () => {
     return (
         <div>
             <Navigation />
             <br />
             <div className="container">
                 <div class="row justify-content-center">
-                    <RegisterSystem />
+                <AllUsers />
                 </div>
             </div>
             <br />
@@ -19,4 +19,4 @@ const Register = () => {
     );
 };
 
-export default Register;
+export default Users;
